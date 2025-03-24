@@ -28,7 +28,8 @@ public class App {
             if (cmd.equals("exit")) {
                 systemController.exit();
                 break;
-            } else if (cmd.length() == 0) {
+            } else if (cmd.isEmpty()) {
+
                 System.out.println("명령어가 입력되지 않았음");
                 continue;
             }
@@ -37,9 +38,14 @@ public class App {
                 motivationController.add();
             } else if (cmd.equals("list")) {
                 motivationController.list();
-            } else {
+            } else if (cmd.equals("del")) {
+                motivationController.delete();
+            }
+            else if (cmd.equals("update")) {
+                motivationController.update();
+            }
+            else {
                 System.out.println("사용할 수 없는 명령어야");
-                continue;
             }
         }
     }
