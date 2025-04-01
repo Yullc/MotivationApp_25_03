@@ -1,4 +1,4 @@
-package org.example.motivation.entity;
+package org.example;
 
 public class Motivation {
     private int id;
@@ -34,13 +34,5 @@ public class Motivation {
     public void setSource(String source) {
         this.source = source;
     }
-
-    @Override
-    public String toString() {
-        return "Motivation{" +
-                "id=" + id +
-                ", body='" + body + '\'' +
-                ", source='" + source + '\'' +
-                '}';
-    }
 }
+
